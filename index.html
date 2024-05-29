@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/ico/sundress.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/colors.css"/>
+    <link rel="stylesheet" type="text/css" href="css/frame.css"/>
+    <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+    <link rel="stylesheet" type="text/css" href="css/submenu.css"/>
+    <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+    <title>Сарафан</title>
+    <script src="js/sprite-svg.js" defer></script>
+    <script src="js/submenu.js" defer></script>
+  </head>
+  <body>
+    <menu>
+      <div class="menu">
+        <div class="logo"><img src="/img/sundress.png" alt=""></div>
+        <div class="operating-mode">
+          <div>Режим работы:</div>
+          <span>пн-вс 10:00-21:00</span>
+          <span>Лента 08:00-22:00</span>
+        </div>
+        <a class="contacts" href="">Контакты</a>
+        <a class="map" href="">Карта ТЦ</a>
+        <div class="search-panel">
+          <input type="text" placeholder="Найти магазин">
+          <button><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
+        </div>
+        <button class="burger"><span></span></button>
+      </div>
+      <div class="submenu">
+        <!-- <div class="search-panel">
+          <input type="text" placeholder="Найти магазин">
+          <button><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
+        </div> -->
+      </div>
+    </menu>
+    <main>
+
+      <script>
+        const main = document.querySelector("main");
+        const lorem = `<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta maiores fugit distinctio cupiditate, totam animi optio. Saepe quod illo porro aliquid dolore totam dicta deserunt provident soluta? Officiis, iure libero.</p>`;
+        for (let index = 0; index < 40; index++) {
+          main.insertAdjacentHTML('beforeend', lorem);
+        }
+      </script>
+
+    </main>
+    <footer>
+      <div class="col-1"><img src="/img/sundress.png" alt="" class="logo"></div>
+
+      <a href="" class="col-2">Магазины</a>
+      <a href="" class="col-2">Кафе и рестораны</a>
+      <a href="" class="col-2">Услуги и сервисы</a>
+      <a href="" class="col-2">Развлечения</a>
+
+      <a href="" class="col-3">О нас</a>
+      <a href="" class="col-3">События</a>
+      <a href="" class="col-3">Галерея</a>
+
+      <a href="" class="col-4">Аренда</a>
+      <a href="" class="col-4">Контакты</a>
+      <a href="" class="col-4">Вакансии</a>
+
+      <a href="" class="col-5">Тендеры</a>
+      <a href="" class="col-5">Политика конфиденциальности</a>
+      <a href="" class="col-5">Карта ТЦ</a>
+
+      <div class="col-6 search">
+        <div class="search-panel">
+          <input type="text" placeholder="Найти магазин">
+          <button><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <button><svg class="icon"><use xlink:href="#ico-telegram"/></svg></button>
+        <button><svg class="icon"><use xlink:href="#ico-vk"/></svg></button>
+      </div>
+      
+      <div class="col-7">300041, Тульская обл.,<br>г. Тула, ул. Путейская, д. 5</div>
+      <div class="col-7">ТЦ Сарафан: 10:00-21:00<br>Лента: 08:00-22:00</div>
+      <div class="col-7">+7 (4872) 33-80-55</div>
+    </footer>
+  </body>
+</html>
