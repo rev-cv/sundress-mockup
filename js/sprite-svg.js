@@ -22,7 +22,7 @@ const sprite = `
     </symbol>
 
     <symbol id="ico-crumb" viewBox="0 0 8 7">
-        <path d="M1 1L6.68156 3.02913C7.124 3.18714 7.124 3.81286 6.68156 3.97087L1 6" stroke="#C4C4C4" stroke-linecap="round"/>
+        <path d="M1 1L6.68156 3.02913C7.124 3.18714 7.124 3.81286 6.68156 3.97087L1 6" stroke="var(--color-text-placeholder)" stroke-linecap="round" fill="transparent"/>
     </symbol>
 
 

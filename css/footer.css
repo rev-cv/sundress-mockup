@@ -79,7 +79,7 @@ footer > .col-6 > button > svg {
 
 @media (width <= 1500px) {
     footer {
-        grid-template-columns: 1fr 1.5fr .3fr 1.5fr 2fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr 2fr 1.5fr;
         grid-template-rows: repeat(6, 50px);
     }
 

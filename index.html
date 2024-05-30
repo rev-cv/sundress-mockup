@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/menu.css"/>
     <link rel="stylesheet" type="text/css" href="css/submenu.css"/>
     <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="css/content.css"/>
     <title>Сарафан</title>
     <script src="js/sprite-svg.js" defer></script>
     <script src="js/submenu.js" defer></script>
@@ -17,7 +18,7 @@
   <body>
     <menu>
       <div class="menu">
-        <div class="logo"><img src="/img/sundress.png" alt=""></div>
+        <div class="logo"><img src="img/sundress.png" alt=""></div>
         <div class="operating-mode">
           <div>Режим работы:</div>
           <span>пн-вс 10:00-21:00</span>
@@ -40,17 +41,86 @@
     </menu>
     <main>
 
-      <script>
-        const main = document.querySelector("main");
-        const lorem = `<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta maiores fugit distinctio cupiditate, totam animi optio. Saepe quod illo porro aliquid dolore totam dicta deserunt provident soluta? Officiis, iure libero.</p>`;
-        for (let index = 0; index < 40; index++) {
-          main.insertAdjacentHTML('beforeend', lorem);
-        }
-      </script>
+      <div class="bread-crumbs">
+        <a href="">Главная</a>
+        <svg class="icon"><use xlink:href="#ico-crumb"/></svg>
+        <span href="">Аренда</span>
+      </div>
+
+      <div class="block-1">
+        <div class="cover"><img src="img/photo-1.png" alt=""></div>
+        <div class="content">
+          <div class="title">Аренда в ТУЦ “Сарафан”</div>
+          <p>Торговый центр «Сарафан», расположенный по адресу: г. Тула, ул. Путейская, д.5 (Площадь Московского вокзала), предлагает помещения в аренду от собственника от 25 до 1000 кв. м.</p>
+          <a class="download" href="">
+            <span>Скачать презентацию</span>
+            <svg class="icon"><use xlink:href="#ico-download"/></svg>
+          </a>
+          <div class="title-2">Преимущества аренды в нашем торговом центре:</div>
+          <ul>
+            <li>ТЦ «Сарафан» находится в 5 минутах езды от центра города на площади Московского вокзала на одной из самых оживленных улиц города – Красноармейский проспект.</li>
+            <li>Рядом жилой массив, пересечение основных транспортных и пешеходных потоков –конечная остановка общественного транспорта, железнодорожный вокзал.</li>
+            <li>На территории ТЦ «Сарафан» есть бесплатная парковка для клиентов, более 500 машиномест, удобный подъезд.</li>
+            <li>Ежедневно наш ТЦ посещает порядка 10 000 тысяч человек различной целевой аудитории</li>
+            <li>Демократичные цены за аренду площади</li>
+            <li>У нас Вы можете арендовать площадь под магазины белья, одежды и обуви, салоны, точки общепита и др.</li>
+          </ul>
+          <p>Открытие торговой точки в одном из оживленных мест города обеспечит доходность, развитие и процветание Вашего бизнеса.</p>
+        </div>
+      </div>
+
+
+      <div class="block-2">
+        <div class="title">Более 130 бутиков и магазинов уже арендуют у нас помещения</div>
+        <div class="carusel">
+          <img src="img/familia.png" alt="">
+          <img src="img/letual.png" alt="">
+          <img src="img/lenta.png" alt="">
+          <div class="navigator">
+            <button class="back"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <button class="next"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
+          </div>
+        </div>
+        <ul>
+          <li>Якорные арендаторы - Лента, Детский Мир, Технопарк, Модис, Familia, Читай город, Тутанхамон, Л'Этуаль</li>
+          <li>Бренды - EWA, Artigli, Gerzedo, Goergo, Du monde, Petek, Neri Karra, Ledy Collection, Paolo Conte, P'Cont, VINZER, Ace, Tonnelli, Milavitsa, и др.</li>
+          <li>Магазины спортивной одежды и инвентаря: Адреналин, Спорт Лайн</li>
+          <li>Зона фудкорта - Burger King, Империя вкуса, Про Кофий, Добрая сдоба</li>
+          <li>Салоны связи: Билайн, Мегафон, YOTA, Связной, Теле2</li>
+          <li>Зоосад, аптека «Здесь аптека», «Арт-оптика», Fresh Оптика, ковры, салоны штор, текстиль Missis Hatson и Home TEX, салон Арт-Самовар, посуда, подарки, картины, сувениры и другие.</li>
+        </ul>
+      </div>
+
+
+      <div class="block-3">
+        <div class="achievements">
+          <div class="key">Общая площадь торгового центра</div>
+          <div class="value">25 816 м²</div>
+
+          <div class="key">Площадь, сдаваемая в аренду</div>
+          <div class="value">16 675 м²</div>
+
+          <div class="key">Парковка (машиномест)</div>
+          <div class="value">500</div>
+
+          <div class="key">Посещаемость (в неделю)</div>
+          <div class="value">100 000 чел</div>
+        </div>
+
+        <img class="p1" src="img/photo-2.png" alt="">
+        <img class="p2" src="img/photo-3.png" alt="">
+        <img class="p3" src="img/photo-4.png" alt="">
+        <img class="p4" src="img/photo-5.png" alt="">
+        <img class="p5" src="img/photo-6.png" alt="">
+      </div>
 
     </main>
+    
     <footer>
-      <div class="col-1"><img src="/img/sundress.png" alt="" class="logo"></div>
+      <div class="col-1"><img src="img/sundress.png" alt="" class="logo"></div>
 
       <a href="" class="col-2">Магазины</a>
       <a href="" class="col-2">Кафе и рестораны</a>
