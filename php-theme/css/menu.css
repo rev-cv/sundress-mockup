@@ -1,0 +1,156 @@
+/* begin in frame.css */
+
+.menu {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: var(--color-widget);
+    padding: 0 var(--padding-frame-elements);
+}
+
+.menu > .logo {
+    flex-grow: 1;
+    text-align-last: left;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu > .logo > img {
+    width: 85px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.burger {
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    display: block;
+    width: 33px;
+    height: 24px;
+}
+
+.burger::before,
+.burger::after,
+.burger > span {
+    position: absolute;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--color-accent);
+    transition: .3s 
+}
+
+.burger::before {
+    content: "";
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    width: 100%;
+}
+
+.burger::after {
+    content: "";
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    transform-origin: center;
+}
+
+.burger > span {
+    top: 10px;
+    right: 0;
+    width: 56.25%;
+}
+
+.burger.active > span {
+    opacity: 0;
+}
+
+.burger.active::before {
+    rotate: -45deg;
+    translate: 0 10px;
+}
+
+.burger.active::after {
+    rotate: 45deg;
+    translate: 0 -10px;
+}
+
+.menu > .operating-mode > *,
+.menu > a {
+    font-size: 14px;
+    color: var(--color-text-navigator);
+    white-space: nowrap;
+}
+
+.menu > a,
+.menu > .search-panel,
+.menu > .operating-mode {
+    margin: 0 clamp(14px, 3%,  90px);
+}
+
+.menu > .operating-mode {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3px;
+}
+
+.menu > .operating-mode > span {
+    grid-column: 2 / 3;
+}
+
+.search-panel {
+    display: flex;
+    align-items: center;
+    border-radius: 88px;
+    overflow: hidden;
+    height: 40px;
+    background-color: var(--color-widget);
+    padding: 16px;
+    box-shadow: 2px 4px 11px 0px #0000002B;
+}
+
+.search-panel > input {
+    font-size: 12px;
+    color: var(--color-text);
+    flex-grow: 1;
+    background-color: transparent;
+}
+
+.search-panel > button {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-panel > button > svg {
+    height: 100%;
+    width: 100%;
+}
+
+@media (width <= 1200px) {
+    .menu > .operating-mode {
+        display: none;
+    }
+}
+
+@media (width <= 760px) {
+    .menu > .search-panel {
+        display: none;
+    }
+
+    .menu > .burger {
+        margin-left: 20px;
+    }
+}
+
+@media (width <= 480px) {
+    .menu > a {
+        display: none;
+    }
+}
