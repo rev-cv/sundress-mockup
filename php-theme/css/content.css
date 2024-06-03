@@ -116,41 +116,54 @@ main > .block-2 > .title {
     color: var(--color-text);
     grid-column: 1 / -1;
 }
-
-main > .block-2 > .carusel {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0 45px;
-}
-
-main > .block-2 > .carusel > img {
+main > .block-2 > .carousel {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    overflow: hidden;
 }
 
-main > .block-2 > .carusel > .navigator {
-    grid-column: 1 / -1;
+main > .block-2 > .carousel > .inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+main > .block-2 > .carousel > .inner > .item {
+    flex: 0 0 calc(100% / 3);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+main > .block-2 > .carousel > .inner > .item img {
+    width: 100%;
+    height: auto;
+}
+
+main > .block-2 > .carousel > .navigator {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 30px;
 }
 
-main > .block-2 > .carusel > .navigator > button {
+main > .block-2 > .carousel > .navigator > button {
     background-color: transparent;
 }
 
-main > .block-2 > .carusel > .navigator > button > svg {
+main > .block-2 > .carousel > .navigator > button > svg {
     width: 43px;
     height: 16px;
 }
 
-main > .block-2 > .carusel > .navigator > button.back > svg {
+main > .block-2 > .carousel > .navigator > button.prev > svg {
     rotate: 180deg;
 }
 
-main > .block-2 > .carusel > .navigator > span {
+main > .block-2 > .carousel > .navigator > .points {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+main > .block-2 > .carousel > .navigator > .points > span {
     --radius: 6px;
     background-color: var(--color-text-navigator);
     width: var(--radius);
@@ -160,28 +173,20 @@ main > .block-2 > .carusel > .navigator > span {
     opacity: .5;
 }
 
-main > .block-2 > .carusel > .navigator > span.active {
+main > .block-2 > .carousel > .navigator > .points > span.active {
     --radius: 9px;
     opacity: 1;
 }
 
 @media (width <= 1600px) {
-    main > .block-2 > .carusel {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    main > .block-2 > .carusel > img:nth-child(3) {
-        display: none;
+    main > .block-2 > .carousel > .inner > .item {
+        flex: 0 0 calc(100% / 2);
     }
 }
 
 @media (width <= 1200px) {
-    main > .block-2 > .carusel {
-        grid-template-columns: 1fr;
-    }
-    
-    main > .block-2 > .carusel > img:nth-child(2) {
-        display: none;
+    main > .block-2 > .carousel > .inner > .item {
+        flex: 0 0 100%;
     }
 }
 
@@ -223,6 +228,7 @@ main > .block-3 > .achievements > .key {
     font-weight: 700;
     color: var(--color-text-navigator);
     margin-bottom: 16px;
+    text-align: center;
 }
 
 main > .block-3 > .achievements > .value {
@@ -230,6 +236,7 @@ main > .block-3 > .achievements > .value {
     font-weight: 700;
     color: var(--color-text);
     margin-bottom: 36px;
+    text-align: center;
 }
 
 main > .block-3 > .p1 {

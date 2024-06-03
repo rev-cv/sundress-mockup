@@ -31,19 +31,76 @@
 
   <div class="block-2">
     <div class="title"><?php echo esc_html( get_field('title_for_block_2') ); ?></div>
-    <div class="carusel">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/familia.webp" alt="">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/letual.webp" alt="">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/lenta.webp" alt="">
+
+    <div class="carousel">
+
+      <div class="inner">
+
+        <?php 
+          $carusel_image1 = get_field('image_1_for_carousel_block_2'); 
+          $carusel_image2 = get_field('image_2_for_carousel_block_2'); 
+          $carusel_image3 = get_field('image_3_for_carousel_block_2'); 
+          $carusel_image4 = get_field('image_4_for_carousel_block_2'); 
+          $carusel_image5 = get_field('image_5_for_carousel_block_2'); 
+        ?>
+
+        <?php if( $carusel_image1 ): ?>
+          <div class="item">
+            <img 
+              src="<?php echo esc_url( $carusel_image1['url'] ); ?>" 
+              alt="<?php echo esc_attr( $carusel_image1['alt'] ); ?>" 
+            />
+          </div>
+        <?php endif; ?>
+
+        <?php if( $carusel_image2 ): ?>
+          <div class="item">
+            <img 
+              src="<?php echo esc_url( $carusel_image2['url'] ); ?>" 
+              alt="<?php echo esc_attr( $carusel_image2['alt'] ); ?>" 
+            />
+          </div>
+        <?php endif; ?>
+
+        <?php if( $carusel_image3 ): ?>
+          <div class="item">
+            <img 
+              src="<?php echo esc_url( $carusel_image3['url'] ); ?>" 
+              alt="<?php echo esc_attr( $carusel_image3['alt'] ); ?>" 
+            />
+          </div>
+        <?php endif; ?>
+
+        <?php if( $carusel_image4 ): ?>
+          <div class="item">
+            <img 
+              src="<?php echo esc_url( $carusel_image4['url'] ); ?>" 
+              alt="<?php echo esc_attr( $carusel_image4['alt'] ); ?>" 
+            />
+          </div>
+        <?php endif; ?>
+
+        <?php if( $carusel_image5 ): ?>
+          <div class="item">
+            <img 
+              src="<?php echo esc_url( $carusel_image5['url'] ); ?>" 
+              alt="<?php echo esc_attr( $carusel_image5['alt'] ); ?>" 
+            />
+          </div>
+        <?php endif; ?>
+      </div>
+
       <div class="navigator">
-        <button class="back"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
-        <span class="active"></span>
-        <span></span>
-        <span></span>
+        <button class="prev"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
+        <div class="points"></div>
         <button class="next"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
       </div>
+
     </div>
+
+    <div>
       <?php echo wp_kses_post ( get_field('description_for_block_2') ); ?>
+    </div>
       
   </div>
 

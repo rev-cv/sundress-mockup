@@ -9,6 +9,7 @@ require_once 'includes/user-fields-customizer.php';
 function my_custom_theme_scripts() {
     wp_enqueue_script('sprite-svg', get_template_directory_uri() . '/js/sprite-svg.js', array(), '1.0.0', true);
     wp_enqueue_script('submenu', get_template_directory_uri() . '/js/submenu.js', array(), '1.0.0', true);
+    wp_enqueue_script('carousel', get_template_directory_uri() . '/js/carousel.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'my_custom_theme_scripts');
 

@@ -14,6 +14,7 @@
     <title>Сарафан</title>
     <script src="js/sprite-svg.js" defer></script>
     <script src="js/submenu.js" defer></script>
+    <script src="js/carousel.js" defer></script>
   </head>
   <body>
     <menu>
@@ -68,22 +69,34 @@
           <p>Открытие торговой точки в одном из оживленных мест города обеспечит доходность, развитие и процветание Вашего бизнеса.</p>
         </div>
       </div>
-
-
-      <div class="block-2">
-        <div class="title">Более 130 бутиков и магазинов уже арендуют у нас помещения</div>
-        <div class="carusel">
-          <img src="img/familia.png" alt="">
-          <img src="img/letual.png" alt="">
-          <img src="img/lenta.png" alt="">
-          <div class="navigator">
-            <button class="back"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
-            <span class="active"></span>
-            <span></span>
-            <span></span>
-            <button class="next"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
-          </div>
+        <div class="block-2">
+          <div class="title">Более 130 бутиков и магазинов уже арендуют у нас помещения</div>
+          <div class="carousel">
+            <div class="inner">
+              <div class="item">
+                  <img src="img/familia.png" alt="Image 1">
+              </div>
+              <!-- Добавьте остальные изображения -->
+              <div class="item">
+                  <img src="img/letual.png" alt="Image 2">
+              </div>
+              <div class="item">
+                  <img src="img/lenta.png" alt="Image 2">
+              </div>
+              <div class="item">
+                <img src="img/lenta.png" alt="Image 2">
+              </div>
+              <div class="item">
+                <img src="img/lenta.png" alt="Image 2">
+              </div>
+            </div>
+            <div class="navigator">
+              <button class="prev"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
+              <div class="points"></div>
+              <button class="next"><svg class="icon"><use xlink:href="#ico-arrow"/></svg></button>
+            </div>
         </div>
+
         <ul>
           <li>Якорные арендаторы - Лента, Детский Мир, Технопарк, Модис, Familia, Читай город, Тутанхамон, Л'Этуаль</li>
           <li>Бренды - EWA, Artigli, Gerzedo, Goergo, Du monde, Petek, Neri Karra, Ledy Collection, Paolo Conte, P'Cont, VINZER, Ace, Tonnelli, Milavitsa, и др.</li>
