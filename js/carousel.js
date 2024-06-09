@@ -1,4 +1,5 @@
 const carousel = document.querySelector('main > .block-2 > .carousel > .inner');
+const navigator = document.querySelector('main > .block-2 > .carousel > .navigator');
 const prevButton = document.querySelector('main > .block-2 > .carousel > .navigator > .prev');
 const nextButton = document.querySelector('main > .block-2 > .carousel > .navigator > .next');
 const carouselItems = document.querySelectorAll('main > .block-2 > .carousel > .inner > .item');
@@ -40,6 +41,35 @@ function checkPoint () {
     })
 }
 
-intervalId = setInterval(() => {
+let intervalId = setInterval(() => {
     nextButton.click();
-}, 5000); // Задержка в 3 секунды (3000 миллисекунд)
+}, 5000);
+
+
+function adaptScreenSize() {
+    const screenWidth = window.innerWidth;
+    const countItems = carouselItems.length;
+    navigator.style.display = "";
+
+    if (screenWidth <= 1200) {
+        points.innerHTML = "<span></span>".repeat(countItems)
+    } else if (screenWidth <= 1600) {
+        if (2 >= countItems) {
+            points.innerHTML = "<span></span>".repeat(countItems);
+            navigator.style.display = "none";
+        } else {
+            points.innerHTML = "<span></span>".repeat(countItems - 1)
+        }
+    } else {
+        if (3 >= countItems) {
+            points.innerHTML = "<span></span>".repeat(countItems);
+            navigator.style.display = "none";
+        } else {
+            points.innerHTML = "<span></span>".repeat(countItems - 2)
+        }
+    }
+    checkPoint ()
+}
+
+window.addEventListener('resize', adaptScreenSize);
+window.addEventListener('load', adaptScreenSize);
